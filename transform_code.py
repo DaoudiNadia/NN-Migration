@@ -1,5 +1,5 @@
 """
-Helper functions to transform PyTotrch and TensorFlow nn code to BUML model.
+Helper functions to transform PyTorch and TensorFlow nn code to BUML model.
 """
 
 import argparse
@@ -7,9 +7,7 @@ import ast
 from typing import TYPE_CHECKING
 
 
-from besser.generators.nn_migration.tf2torch.input_shape_retriever import (
-    update_model
-)
+from tf2torch.input_shape_retriever import update_model
 from besser.BUML.metamodel.nn import Configuration, Dataset, Image
 from besser.BUML.metamodel.nn import Layer, NN
 

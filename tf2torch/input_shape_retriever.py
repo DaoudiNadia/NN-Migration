@@ -58,7 +58,6 @@ def extract_nn_code(file_path: str, nn_type: str):
             if (not (in_init or in_call_method)) or nn_type == "sequential":
                 loader_code.append(line)
                 # Check for the first occurrence of `loader` and `train`
-                #if "loader" in line and "train" in line:
                 if "= load_and_preprocess_data" in line:
                     loader_name = line.split(",")[0]
                     break

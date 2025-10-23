@@ -288,29 +288,10 @@ class ASTParserTorch(ASTParser):
 
         self.data_config["train_data"]["input_format"] = "images"
         transform_args = node.value.args[0].elts
-        #resize_arg = next(
-        #    (arg for arg in transform_args if arg.func.attr == "Resize"), None
-        #)
         normalize_arg = next((
             arg for arg in transform_args if arg.func.attr == "Normalize"),
             None
         )
-        #if resize_arg:
-        #    if isinstance(resize_arg.args[0], ast.Name):
-        #        for past_node in self.unprocessed_nodes:
-        #            name_node = (
-        #                past_node
-        #                if isinstance(past_node.targets[0], ast.Name)
-        #                else None
-        #            )
-        #        if name_node:
-        #            if name_node.targets[0].id == resize_arg.args[0].id:
-        #                sizes = [i.value for i in name_node.value.elts]
-        #                self.data_config["train_data"]["images_size"] = sizes
-
-        #    elif isinstance(resize_arg.args[0], ast.Tuple):
-        #        sizes = [i.value for i in resize_arg.args[0].elts]
-        #        self.data_config["train_data"]["images_size"] = sizes
 
         if normalize_arg:
             self.data_config["train_data"]["normalize_images"] = True
