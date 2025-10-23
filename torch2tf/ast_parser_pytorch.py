@@ -4,19 +4,19 @@ written in PyTorch and transforms it to a BUML model.
 It also extracts data and model configration attributes. 
 """
 import ast
-from besser.generators.nn_migration.ast_parser_nn import ASTParser
-from besser.generators.nn_migration.torch2tf.definitions import (
+from nn_migration.ast_parser_nn import ASTParser
+from nn_migration.torch2tf.definitions import (
     actv_fun_mapping, cnn_layers, loss_func_mapping
 )
 
-from besser.BUML.metamodel.nn import NN, Layer
-import besser.BUML.metamodel.nn as mm_classes
+from metamodel.nn import NN, Layer
+import metamodel.nn as mm_classes
 
-from besser.generators.nn_migration.torch2tf.definitions import (
+from nn_migration.torch2tf.definitions import (
     layers_mapping, params_mapping, static_params,
     pos_params, int2list_params, lyrs_of_int2list_params
 )
-from besser.generators.nn_migration.transform_code import (
+from nn_migration.transform_code import (
     process_positional_params, set_static_params, param_to_list
 )
 

@@ -9,13 +9,13 @@ Argument:
     datashape (str): 
 """
 
-from besser.generators.nn_migration.torch2tf.ast_parser_pytorch import (
+from nn_migration.torch2tf.ast_parser_pytorch import (
     ASTParserTorch
 )
-from besser.generators.nn_migration.transform_code import (
+from nn_migration.transform_code import (
     parse_arguments_transform, transform
 )
-from besser.generators.nn.tf.tf_code_generator import TFGenerator
+from generators.nn.tf.tf_code_generator import TFGenerator
 
 
 def main():

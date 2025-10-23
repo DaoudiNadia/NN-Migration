@@ -9,8 +9,8 @@ import re
 from ast import literal_eval
 import tensorflow as tf
 from keras import layers
-from besser.BUML.metamodel.nn import NN, Layer
-from besser.generators.nn_migration.tf2torch.definitions import layers_buml2tf
+from nn import NN, Layer
+from nn_migration.tf2torch.definitions import layers_buml2tf
 
 
 def extract_nn_code(file_path: str, nn_type: str):

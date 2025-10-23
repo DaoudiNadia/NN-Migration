@@ -12,12 +12,12 @@ Argument:
         script defines a dataset, it can be skipped.
 """
 
-from besser.generators.nn_migration.tf2torch.ast_parser_tf import ASTParserTF
+from nn_migration.tf2torch.ast_parser_tf import ASTParserTF
 
-from besser.generators.nn_migration.transform_code import (
+from nn_migration.transform_code import (
     parse_arguments_transform, transform
 )
-from besser.generators.nn.pytorch.pytorch_code_generator import PytorchGenerator
+from generators.nn.pytorch.pytorch_code_generator import PytorchGenerator
 
 def main():
     """Tt transforms TensorFlow code to PyTorch code"""

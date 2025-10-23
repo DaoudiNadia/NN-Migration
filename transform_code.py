@@ -8,11 +8,11 @@ from typing import TYPE_CHECKING
 
 
 from tf2torch.input_shape_retriever import update_model
-from besser.BUML.metamodel.nn import Configuration, Dataset, Image
-from besser.BUML.metamodel.nn import Layer, NN
+from metamodel.nn import Configuration, Dataset, Image
+from metamodel.nn import Layer, NN
 
 if TYPE_CHECKING:
-    from besser.generators.nn_migration.ast_parser_nn import ASTParser
+    from ast_parser_nn import ASTParser
 
 def parse_arguments_transform():
     """

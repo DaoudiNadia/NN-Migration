@@ -6,18 +6,18 @@ It also extracts data and model configration attributes.
 
 
 import ast
-from besser.generators.nn_migration.ast_parser_nn import ASTParser
+from nn_migration.ast_parser_nn import ASTParser
 
-from besser.generators.nn_migration.tf2torch.definitions import (
+from nn_migration.tf2torch.definitions import (
     layers_mapping, params_mapping, static_params, rnn_layers,
     pos_params, int2list_params, lyrs_of_int2list_params, loss_func_mapping
 )
-from besser.generators.nn_migration.transform_code import (
+from nn_migration.transform_code import (
     process_positional_params, param_to_list, set_static_params
 )
 
-import besser.BUML.metamodel.nn as mm_classes
-from besser.BUML.metamodel.nn import NN, Layer
+import nn as mm_classes
+from nn import NN, Layer
 
 class ASTParserTF(ASTParser):
     """
