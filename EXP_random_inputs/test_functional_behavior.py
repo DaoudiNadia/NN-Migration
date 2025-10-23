@@ -13,13 +13,6 @@ import numpy as np
 import tensorflow as tf
 
 
-# Suppress TensorFlow Addons warning
-warnings.filterwarnings("ignore", message="TensorFlow Addons.*")
-
-# Suppress TensorFlow INFO and WARNING logs
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-
-
 
 def load_nn_from_file(filepath: str):
     """
@@ -441,7 +434,6 @@ def copy_model_weights(tf_model, pt_model, x_torch=False, subnn=False):
             pt_layers.append(module)
 
     if len(tf_layers) != len(pt_layers):
-        #print("tf", tf_layers, "pt", pt_layers)
         raise ValueError(f"Layer count mismatch: TF={len(tf_layers)}, \
                          PT={len(pt_layers)}")
 
